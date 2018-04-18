@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <title>(Liya) 老師資料 | Engoo《線上英文家教》便宜一對一外籍老師英語口說課！免費試聽、教材下載</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+    <!-- Start of Baidu Transcode -->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="mobile-agent" content="format=html5;url=https://www.jianshu.com/p/20ea93641bda">
+    <!-- End of Baidu Transcode -->
+
+    <meta name="descriptions" content="作为前端开发者，node和npm安装必不可少。然而有时会因为安装新的app（如MacPorts，慎装，它会修改基本环境变量以及npm的全局设置等）导致版本环境混乱，有2种方式有效管理： 特别推荐安装安装nvm来管理Node版本； 其次推荐brew来对node和npm版本进行管理。 （首选）nvm管理Node 目前我更多的使用nvm来进行node版本管理，它会安装相应版本的npm。执行如下命令...">
+
+</head>
+
+<body lang="zh-CN" class="reader-song-font">
+    <!-- 全局顶部导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="width-limit">
+            <!-- 左上方 Logo -->
+            <a class="logo" href="/">
+                <img src="//cdn2.jianshu.io/assets/web/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="Nav logo" />
+            </a>
+
+            <!-- 右上角 -->
+            <!-- 未登录显示登录/注册/写文章 -->
+            <a class="btn write-btn" target="_blank" href="/writer#/">
+                <i class="iconfont ic-write"></i>写文章
+            </a>
+            <a class="btn sign-up" href="/sign_up">注册</a>
+            <a class="btn log-in" href="/sign_in">登录</a>
+
+            <!-- 如果用户登录，显示下拉菜单 -->
+
+            <div id="view-mode-ctrl">
+            </div>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="nav navbar-nav">
+                        <li class="tab ">
+                            <a href="/">
+                                <span class="menu-text">首页</span>
+                                <i class="iconfont ic-navigation-discover menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="tab ">
+                            <a id="web-nav-app-download-btn" class="app-download-btn" href="/apps?utm_medium=desktop&amp;utm_source=navbar-apps">
+                                <span class="menu-text">下载App</span>
+                                <i class="iconfont ic-navigation-download menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="search">
+                            <form target="_blank" action="/search" accept-charset="UTF-8" method="get">
+                                <input name="utf8" type="hidden" value="&#x2713;" />
+                                <input type="text" name="q" id="q" value="" autocomplete="off" placeholder="搜索" class="search-input" />
+                                <a class="search-btn" href="javascript:void(null)">
+                                    <i class="iconfont ic-search"></i>
+                                </a>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="note">
+        <a target="_blank" href="/apps/download?utm_source=sbc" id="web-note-ad-fixed">
+            <span class="close">&times;</span>
+        </a>
+        <div class="post">
+            <div class="article">
+                <h1 class="title">Mac上安装Node和NPM</h1>
+
+                <!-- 作者区域 -->
+                <div class="author">
+                    <a class="avatar" href="/u/71d6771ce482">
+                        <img src="//upload.jianshu.io/users/upload_avatars/1507375/0518a41db2aa.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"
+                            alt="96" />
+                    </a>
+                    <div class="info">
+                        <span class="name">
+                            <a href="/u/71d6771ce482">阿啦嘞</a>
+                        </span>
+                        <!-- 关注用户按钮 -->
+                        <div props-data-classes="user-follow-button-header" data-author-follow-button></div>
+                        <!-- 文章数据信息 -->
+                        <div class="meta">
+                            <!-- 如果文章更新时间大于发布时间，那么使用 tooltip 显示更新时间 -->
+                            <span class="publish-time" data-toggle="tooltip" data-placement="bottom" title="最后编辑于 2018.01.02 12:39">2016.01.26 18:54*</span>
+                            <span class="wordage">字数 541</span>
+                        </div>
+                    </div>
+                    <!-- 如果是当前作者，加入编辑按钮 -->
+                </div>
+
+                <!-- 文章内容 -->
+                <div data-note-content class="show-content">
+                    <div class="show-content-free">
+                        <p>作为前端开发者，node和npm安装必不可少。然而有时会因为安装新的app（如MacPorts，慎装，它会修改基本环境变量以及npm的全局设置等）导致版本环境混乱，有2种方式有效管理：</p>
+                        <ul>
+                            <li>特别推荐安装安装nvm来管理Node版本；</li>
+                            <li>其次推荐brew来对node和npm版本进行管理。</li>
+                        </ul>
+                        <hr>
+                        <h1>（首选）nvm管理Node</h1>
+                        <p>目前我更多的使用nvm来进行node版本管理，它会安装相应版本的npm。
+                            <br> 执行如下命令：
+                        </p>
+                        <ol>
+                            <li>安装nvm</li>
+                        </ol>
+                        <pre><code>curl -L -o- [http://build.sankuai.com/nvm/install](http://build.sankuai.com/nvm/install) | bash
+</code></pre>
+                        <p>上述失败了的话试试这个：</p>
+                        <pre><code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+</code></pre>
+                        <ol start="2">
+                            <li>安装node及npm</li>
+                        </ol>
+                        <pre><code>nvm install v8.5.0
+</code></pre>
+                        <ol start="3">
+                            <li>将镜像源设置为淘宝镜像</li>
+                        </ol>
+                        <pre><code>export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+npm --registry=https://registry.npm.taobao.org
+</code></pre>
+                        <hr>
+                        <h1>安装brew</h1>
+                        <p>
+                            <code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>
+                        </p>
+                        <h1>brew安装node</h1>
+                        <ol>
+                            <li>首先更新brew，使其在最新版本，代码如下：
+                                <br>
+                                <code>$ brew update</code>
+                            </li>
+                            <li>确保brew是安全可靠的，代码如下：
+                                <br>
+                                <code>$ brew doctor</code>
+                                <br> 将可能导致如下情况，可针对性逐条处理，处理完成放可完成下一步：
+                            </li>
+                        </ol>
+                        <blockquote>
+                            <p>Warning: Some directories in /usr/local/share/man aren't writable.
+                                <br> This can happen if you "sudo make install" software that isn't managed
+                                <br> by Homebrew. If a brew tries to add locale information to one of these
+                                <br> directories, then the install will fail during the link step.</p>
+                            <p>You should probably
+                                <code>sudo chown -R $(whoami)</code> them:
+                                <br>
+                                <code>/usr/local/share/man/man5</code>
+                                <br>
+                                <code>/usr/local/share/man/man7</code>
+                            </p>
+                        </blockquote>
+                        <ol start="3">
+                            <li>将brew的位置添加到$PATH环境变量中，并保存bash或者profile文件；
+                                <br>
+                                <code>export PATH="/usr/local/bin:$PATH"</code>
+                            </li>
+                            <li>当处理完上述问题后，来处理brew和node关系
+                                <br> 若在上文中出现，如下错误信息：
+                            </li>
+                        </ol>
+                        <blockquote>
+                            <p>Warning: You have unlinked kegs in your Cellar
+                                <br> Leaving kegs unlinked can lead to build-trouble and cause brews that depend on
+                                <br> those kegs to fail to run properly once built. Run
+                                <code>brew link</code> on these:
+                                <br>
+                                <strong>
+                                    <code>node</code>
+                                </strong>
+                                <br> 则需要如下操作：
+                            </p>
+                        </blockquote>
+                        <ul>
+                            <li>清理brew的link
+                                <br>
+                                <code>$ brew cleanup</code>
+                            </li>
+                            <li>
+                                <strong>删除node文件，完全卸载node和npm</strong>
+                            </li>
+                        </ul>
+                        <pre><code>sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}
+</code></pre>
+                        <p>或者是</p>
+                        <pre><code>sudo rm -rf /usr/local/bin/npm /usr/local/share/man/man1/node* /usr/local/lib/dtrace/node.d ~/.npm ~/.node-gyp /opt/local/bin/node opt/local/include/node /opt/local/lib/node_modules
+</code></pre>
+                        <p>或者是下面这样：</p>
+                        <pre><code>  1.在/usr/local/lib目录下，删除任何与node和 node_modules有关的目录；
+  2.在/usr/local/include 目录下，删除任何与node 和 node_modules有关的目录；
+  3.如果你是通过**brew install node**安装的node，则在终端执行**brew uninstall node** ，并在home目录下查找 **local** 或**lib** 或 **include**文件夹，删除任何与**node** 和 **node_modules**有关的目录；
+  4.在**/usr/local/bin**目录下，删除任何与 **node** 执行文件；
+  5.最后下载 **nvm** ，跟随它的介绍安装node。当然，你也可以通过**npm**来安装最新版本的Node。
+</code></pre>
+                        <ol start="5">
+                            <li>通过brew安装node和npm</li>
+                        </ol>
+                        <pre><code>brew link node
+brew uninstall node
+brew install node
+</code></pre>
+                        <ol start="6">
+                            <li>测试Node和npm安装是否成功，安装Grunt
+                                <br>
+                                <code>npm install -g grunt-cli</code>
+                                <br> 如果安装成功，那么恭喜你node，npm，grunt均安装成功。若出现问题，请回顾前面内容。
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 如果是付费文章，未购买，则显示购买按钮 -->
+
+            <!-- 连载目录项 -->
+
+            <!-- 如果是付费文章 -->
+            <!-- 如果是付费连载，已购买，且作者允许赞赏，则显示付费信息和赞赏 -->
+            <div data-vcomp="free-reward-panel"></div>
+
+            <div class="show-foot">
+                <a class="notebook" href="/nb/3081311">
+                    <i class="iconfont ic-search-notebook"></i>
+                    <span>Mac</span>
+                </a>
+                <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请联系作者获得授权，并标注“简书作者”。">
+                    © 著作权归作者所有
+                </div>
+                <div class="modal-wrap" data-report-note>
+                    <a id="report-modal">举报文章</a>
+                </div>
+            </div>
+
+            <!-- 文章底部作者信息 -->
+            <div class="follow-detail">
+                <div class="info">
+                    <a class="avatar" href="/u/71d6771ce482">
+                        <img src="//upload.jianshu.io/users/upload_avatars/1507375/0518a41db2aa.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96"
+                            alt="96" />
+                    </a>
+                    <div props-data-classes="user-follow-button-footer" data-author-follow-button></div>
+                    <a class="title" href="/u/71d6771ce482">阿啦嘞</a>
+
+                </div>
+                <div class="signature">元气小丸子</div>
+            </div>
+
+            <div class="meta-bottom">
+                <div class="btn like-group"></div>
+                <div class="share-group">
+                    <a class="share-circle" data-action="weixin-share" data-toggle="tooltip" data-original-title="分享到微信">
+                        <i class="iconfont ic-wechat"></i>
+                    </a>
+                    <a class="share-circle" data-action="weibo-share" data-toggle="tooltip" href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://cwb.assets.jianshu.io/notes/images/2909367/weibo/image_fa8e0a999051.jpg&#39;, &#39;推荐 阿啦嘞 的文章《Mac上安装Node和NPM》（ 分享自 @简书 ）&#39;,&#39;https://www.jianshu.com/p/20ea93641bda?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));"
+                        data-original-title="分享到微博">
+                        <i class="iconfont ic-weibo"></i>
+                    </a>
+                    <a class="share-circle" data-toggle="tooltip" href="http://cwb.assets.jianshu.io/notes/images/2909367/weibo/image_fa8e0a999051.jpg"
+                        target="_blank" data-original-title="下载长微博图片">
+                        <i class="iconfont ic-picture"></i>
+                    </a>
+                    <a class="share-circle more-share" tabindex="0" data-toggle="popover" data-placement="top" data-html="true" data-trigger="focus"
+                        href="javascript:void(0);" data-content='
+          <ul class="share-list">
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&#39;+e(&#39;https://www.jianshu.com/p/20ea93641bda?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=qzone&#39;)+&#39;&amp;title=&#39;+e(&#39;推荐 阿啦嘞 的文章《Mac上安装Node和NPM》&#39;),x=function(){if(!window.open(r,&#39;qzone&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><i class="social-icon-sprite social-icon-zone"></i><span>分享到QQ空间</span></a></li>
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://twitter.com/share?url=&#39;+e(&#39;https://www.jianshu.com/p/20ea93641bda?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=twitter&#39;)+&#39;&amp;text=&#39;+e(&#39;推荐 阿啦嘞 的文章《Mac上安装Node和NPM》（ 分享自 @jianshucom ）&#39;)+&#39;&amp;related=&#39;+e(&#39;jianshucom&#39;),x=function(){if(!window.open(r,&#39;twitter&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><i class="social-icon-sprite social-icon-twitter"></i><span>分享到Twitter</span></a></li>
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=https://www.jianshu.com/p/20ea93641bda?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=facebook&#39;,x=function(){if(!window.open(r,&#39;facebook&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><i class="social-icon-sprite social-icon-facebook"></i><span>分享到Facebook</span></a></li>
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://plus.google.com/share?url=&#39;+e(&#39;https://www.jianshu.com/p/20ea93641bda?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=google_plus&#39;),x=function(){if(!window.open(r,&#39;google_plus&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><i class="social-icon-sprite social-icon-google"></i><span>分享到Google+</span></a></li>
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:&#39;&#39;,r=&#39;http://www.douban.com/recommend/?url=&#39;+e(&#39;https://www.jianshu.com/p/20ea93641bda?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=douban&#39;)+&#39;&amp;title=&#39;+e(&#39;Mac上安装Node和NPM&#39;)+&#39;&amp;sel=&#39;+e(s)+&#39;&amp;v=1&#39;,x=function(){if(!window.open(r,&#39;douban&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r+&#39;&amp;r=1&#39;};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()"><i class="social-icon-sprite social-icon-douban"></i><span>分享到豆瓣</span></a></li>
+          </ul>
+        '>更多分享</a>
+                </div>
+            </div>
+            <a id="web-note-ad-1" target="_blank" href="/apps/download?utm_source=nbc">
+                <img src="//cdn2.jianshu.io/assets/web/web-note-ad-1-10f08e404d3887d2d45a4bc8f1831403.png" alt="Web note ad 1" />
+            </a>
+            <div id="vue_comment"></div>
+        </div>
+
+        <div class="vue-side-tool" props-data-props-show-qr-code="0"></div>
+    </div>
+    <div class="note-bottom">
+        <div class="js-included-collections"></div>
+        <div data-vcomp="recommended-notes" data-lazy="1.5" data-note-id="2909367"></div>
+        <!-- 相关文章 -->
+        <div class="seo-recommended-notes">
+
+            <div class="note ">
+                <a class="title" target="_blank" href="/p/b358602a085d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">终端操作记录配合ReactNative20171117终端搭建</a>
+                <p class="description">Last login: Fri Nov 17 13:00:32 on console localhost:~ fctarget$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebre...</p>
+                <a class="author" target="_blank" href="/u/53c7886dc8b2?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//upload.jianshu.io/users/upload_avatars/269198/08a3d0df-8bb1-419f-9d09-1fef693b9571.png?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">瀚海星扬</span>
+                </a>
+            </div>
+
+            <div class="note ">
+                <a class="title" target="_blank" href="/p/5c838b273613?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">安装时各种错误</a>
+                <p class="description">npm install -g hexo-clisudo npm install -g hexo-clinode -versionnode --vnodejs -v/usr/bin/ruby -e &quot;$(curl
+                    -fsSL https://raw.githubusercon...</p>
+                <a class="author" target="_blank" href="/u/3a4bd9f1b076?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//cdn2.jianshu.io/assets/default_avatar/2-9636b13945b9ccf345bc98d0d81074eb.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">iOS的Developer</span>
+                </a>
+            </div>
+
+            <div class="note ">
+                <a class="title" target="_blank" href="/p/04141aeaf218?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">（转）nvm:正确的安装和使用node版本管理工具nvm</a>
+                <p class="description">前言 目前主流的node版本管理工具有两种，nvm和n。两者差异挺大的，具体分析可以参考一下淘宝FED团队的一篇文章：管理 node 版本，选择 nvm 还是 n？总的来说，nvm有点类似于 Python 的
+                    virtualenv 或者 Ruby 的 rvm，每个node版...</p>
+                <a class="author" target="_blank" href="/u/99ee516f85c1?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//upload.jianshu.io/users/upload_avatars/7796095/bfad166b-b127-419d-8b9b-4a0012bbd879?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">一个废人</span>
+                </a>
+            </div>
+
+            <div class="note ">
+                <a class="title" target="_blank" href="/p/642f4b6b8463?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">MacOS 配置 React Native 开发环境</a>
+                <p class="description">安装 node.js，可以从 https://nodejs.org 下载安装包安装完成后，通过 node -v 命令可以查看版本，例如：v4.4.7 使用 HomeBrew 安装 watchman 和 flow
+                    brow install watchmanbrow insta...</p>
+                <a class="author" target="_blank" href="/u/409f22104c22?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//upload.jianshu.io/users/upload_avatars/1288769/4f43e1230005?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">Bencalie</span>
+                </a>
+            </div>
+
+            <div class="note have-img">
+                <a class="cover" target="_blank" href="/p/5e07b02d3849?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <img src="//upload-images.jianshu.io/upload_images/2449169-90e1f1d66a314bbf.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+                        alt="240" />
+                </a>
+                <a class="title" target="_blank" href="/p/5e07b02d3849?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">nvm、node环境搭建前端自动化/npm/gulp</a>
+                <p class="description">nvm、node安装方式一 使用Homebrew 如果之前通过&#39;brew install node&#39;方式安装过node，那么需要先删除系统中存在的node：brew remove --force
+                    nodesudo rm -r /usr/local/lib/node_modu...</p>
+                <a class="author" target="_blank" href="/u/5d7da7422e3e?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//cdn2.jianshu.io/assets/default_avatar/11-4d7c6ca89f439111aff57b23be1c73ba.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">Y了个J</span>
+                </a>
+            </div>
+
+            <div class="note have-img">
+                <a class="cover" target="_blank" href="/p/2f681bf73086?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <img src="//upload-images.jianshu.io/upload_images/45821-b30839caf4cfb6a5.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+                        alt="240" />
+                </a>
+                <a class="title" target="_blank" href="/p/2f681bf73086?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">简年2：斯坦福大学《食物与健康》课程笔记（13） </a>
+                <p class="description">上一章： 斯坦福大学《食物与健康》课程笔记（12） 烹饪： 基础食材 3-3 饮食建议： 增加蔬菜摄入 西式饮食的最大问题之一就是，植物源性食物总量和种类摄入的不够，而人类却需要这些食物，用以保持我们的长期健康，并维持一个长期健康的体重水平。
+                    一个普通的美国人每天摄入的水...
+                </p>
+                <a class="author" target="_blank" href="/u/a84b41ba1d77?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//upload.jianshu.io/users/upload_avatars/45821/b52b7f5f-8b60-4190-bc8a-6957526aa083.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">麒轩</span>
+                </a>
+            </div>
+
+            <div class="note have-img">
+                <a class="cover" target="_blank" href="/p/a08c71f95587?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <img src="//upload-images.jianshu.io/upload_images/2748032-654b86a56011925f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+                        alt="240" />
+                </a>
+                <a class="title" target="_blank" href="/p/a08c71f95587?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">《塔罗冥想》魔法师</a>
+                <p class="description">#塔罗冥想#【打卡1st.day】 简单地说，实修的第一个基本法则就是：学习不用力的专注；把工作转化为游戏；让你愿意承受的轭变得不费力，让你背负的担子变得轻松。 不用力的专注也是要把大脑的主宰权让渡给自律系统――从思维和想象的领域转到德性和意志的领域。
+                    一切的实修功夫都奠基...
+                </p>
+                <a class="author" target="_blank" href="/u/02d51db06d6b?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//upload.jianshu.io/users/upload_avatars/2748032/f90c5c67-8482-4469-a0b3-2d48650fe9e5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">铱漩娜</span>
+                </a>
+            </div>
+
+            <div class="note have-img">
+                <a class="cover" target="_blank" href="/p/823a15c4da9b?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <img src="//upload-images.jianshu.io/upload_images/6510502-ab0565d59bec1548?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+                        alt="240" />
+                </a>
+                <a class="title" target="_blank" href="/p/823a15c4da9b?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">为什么不生孩子？</a>
+                <p class="description">前言 多子文化曾长期占据中国生育文化的主体地位，不孝有三，无后为大是传统中国社会的共识。但是最近几十年来，中国生育率水平却持续降低，而且异常猛烈，在有些统计口径中已然是世界最低。为何会这样呢？ A生育率降低 工业文明时代的大趋势
+                    从上古洪荒时代开始，多子多福就是中华文明生育...
+                </p>
+                <a class="author" target="_blank" href="/u/638f122f0f18?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//upload.jianshu.io/users/upload_avatars/6510502/64005e72-b81a-4e31-a34d-ca7ba8bab3f6?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">银发优雅</span>
+                </a>
+            </div>
+
+            <div class="note have-img">
+                <a class="cover" target="_blank" href="/p/700bec5c4540?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <img src="//upload-images.jianshu.io/upload_images/3241954-c43d891aa55f464b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+                        alt="240" />
+                </a>
+                <a class="title" target="_blank" href="/p/700bec5c4540?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">自学第二张</a>
+                <p class="description">第二张。只能自己琢磨，不知方向对不对，希望不久之后，可以发现不一样的自己。</p>
+                <a class="author" target="_blank" href="/u/d095b0bda05d?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+                    <div class="avatar">
+                        <img src="//upload.jianshu.io/users/upload_avatars/3241954/f6b21f0eb2ba.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48"
+                            alt="48" />
+                    </div>
+                    <span class="name">最美时光的最美时光</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/json" data-name="page-data">
+        {
+            "user_signed_in": false,
+            "locale": "zh-CN",
+            "os": "mac",
+            "read_mode": null,
+            "read_font": null,
+            "note_show": {
+                "is_martin_user": false,
+                "is_author": false,
+                "is_following_author": false,
+                "is_liked_note": false,
+                "follow_state": 0,
+                "uuid": "2e9cb79c-e3d9-4a5c-a3af-0ea88fbd0d62"
+            },
+            "note": {
+                "id": 2909367,
+                "slug": "20ea93641bda",
+                "user_id": 1507375,
+                "notebook_id": 3081311,
+                "commentable": true,
+                "likes_count": 55,
+                "views_count": 80676,
+                "public_wordage": 541,
+                "comments_count": 33,
+                "total_rewards_count": 3,
+                "is_author": false,
+                "paid_type": "free",
+                "paid_content_accessible": false,
+                "author": {
+                    "nickname": "阿啦嘞",
+                    "total_wordage": 7618,
+                    "followers_count": 68,
+                    "total_likes_count": 94
+                }
+            }
+        }
+    </script>
+
+    <script src="//cdn2.jianshu.io/assets/babel-polyfill-b99072e62e23ea801bb9.js" crossorigin="anonymous"></script>
+    <script src="//cdn2.jianshu.io/assets/web-base-3ce0d8e9be8a124b7aaa.js" crossorigin="anonymous"></script>
+    <script src="//cdn2.jianshu.io/assets/web-d5b5f0bdbd4d067c9642.js" crossorigin="anonymous"></script>
+
+    <script src="//cdn2.jianshu.io/assets/web/pages/notes/show/entry-d25a5518a0d2551d70c1.js" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,3 +1,2 @@
 #!/usr/bin/env node
- 
-require('../parser.js');
+require('../src/Application.js');

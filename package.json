@@ -1,11 +1,19 @@
 {
-    "name": "seoparser",
-    "version": "0.0.1",
-    "description": "seo parser test",
-    "main": "index.js",
-    "keywords": [],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/chiourichard/seoparser.git"
-    }
+  "name": "seoparser",
+  "version": "0.0.1",
+  "description": "seo parser test",
+  "main": "index.js",
+  "author": {
+    "name": "chiourichard",
+    "email": "chiourichard@gmail.com"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chiourichard/seoparser.git"
+  },
+  "dependencies": {
+    "minimist": ">=1.2.0",
+    "cheerio": ">=1.0.0-rc.2"
+  }
 }
