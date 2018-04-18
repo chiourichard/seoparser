@@ -1,0 +1,11 @@
+{
+    "name": "seoparser",
+    "version": "0.0.1",
+    "description": "seo parser test",
+    "main": "index.js",
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chiourichard/seoparser.git"
+    }
+}
