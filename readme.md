@@ -31,11 +31,11 @@ $bin/seoparser -h
 ## example
 
 ```
-$bin/seoparser -c -a  -b -d  -e  --file=test2.html
+$bin/seoparser -c -a  -b -d 1 -e  --file=test2.html
 
 There is no <meta name=“keywords” ... /> tag in header
 There are 16 <img> tag without alt attribute
 There are 47 <a> tag without rel attribute
-This HTML have more than true <strong> tag
+This HTML have more than 1 <strong> tag
 This HTML have more than one <h1> tag
 ```
