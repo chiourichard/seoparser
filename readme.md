@@ -28,6 +28,12 @@ $bin/seoparser -h
  -e: Detect if a HTML have more than one <H1> tag.
 ```
 
+## unit tests
+
+```
+$npm test
+```
+
 ## example
 
 ```
