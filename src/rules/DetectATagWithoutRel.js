@@ -1,8 +1,10 @@
-class DetectATagWithoutRel {
+const BasicRule = require('./BasicRule.js');
+class DetectATagWithoutRel extends BasicRule {
   // Constructor
 
   constructor() {
     // always initialize all instance properties
+    super();
   }
 
   processRule(content) {
@@ -16,9 +18,14 @@ class DetectATagWithoutRel {
         count++;
       }
     } while (match);
-    if (count > 1) {
-      console.log('There are ' + count + ' <a> tag without rel attribute');
+
+    var result = '';
+    if (count >= 1) {
+      result = 'There are ' + count + ' <a> tag without rel attribute';
+      this.resultInfo(result);
     }
+
+    return result;
   }
 }
 // export the class

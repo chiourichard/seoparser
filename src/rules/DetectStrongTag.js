@@ -1,8 +1,10 @@
-class DetectStrongTag {
+const BasicRule = require('./BasicRule.js');
+class DetectStrongTag extends BasicRule {
   // Constructor
 
   constructor(num) {
     // always initialize all instance properties
+    super();
     this.num = num;
   }
 
@@ -17,9 +19,14 @@ class DetectStrongTag {
         count++;
       }
     } while (match);
+
+    var result = '';
     if (count > this.num) {
-      console.log('This HTML have more than ' + this.num + ' <strong> tag');
+      result = 'This HTML have more than ' + this.num + ' <strong> tag';
+      this.resultInfo(result);
     }
+
+    return result;
   }
 }
 // export the class

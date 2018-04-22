@@ -1,8 +1,10 @@
-class DetectH1Tag {
+const BasicRule = require('./BasicRule.js');
+class DetectH1Tag extends BasicRule {
   // Constructor
 
   constructor() {
     // always initialize all instance properties
+    super();
   }
 
   processRule(content) {
@@ -16,9 +18,14 @@ class DetectH1Tag {
         count++;
       }
     } while (match);
+
+    var result = '';
     if (count > 1) {
-      console.log('This HTML have more than one <h1> tag');
+      result = 'This HTML have more than one <h1> tag';
+      this.resultInfo(result);
     }
+
+    return result;
   }
 }
 // export the class

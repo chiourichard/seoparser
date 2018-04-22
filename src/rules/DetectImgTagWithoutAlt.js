@@ -1,8 +1,10 @@
-class DetectImgTagWithoutAlt {
+const BasicRule = require('./BasicRule.js');
+class DetectImgTagWithoutAlt extends BasicRule {
   // Constructor
 
   constructor() {
     // always initialize all instance properties
+    super();
   }
 
   processRule(content) {
@@ -16,9 +18,14 @@ class DetectImgTagWithoutAlt {
         count++;
       }
     } while (match);
-    if (count > 1) {
-      console.log('There are ' + count + ' <img> tag without alt attribute');
+
+    var result = '';
+    if (count >= 1) {
+      result = 'There are ' + count + ' <img> tag without alt attribute';
+      this.resultInfo(result);
     }
+
+    return result;
   }
 }
 // export the class
